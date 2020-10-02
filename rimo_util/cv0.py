@@ -16,10 +16,10 @@ def read(img_path):
     return img
 
 
-def write(img, img_path, param=[]):
+def write(img, img_path, param=None):
     with open(img_path, 'wb') as f:
         if img.dtype in (np.float64, np.float32, np.float):
-            img = (img * 256).astype(np.uint8)
+            img = (img * 255).astype(np.uint8)
         if param:
             _, data = cv2.imencode(img_path, img, param)
         else:
