@@ -6,7 +6,7 @@
 ## 使用方法
 
 ```
-pip install git+https://github.com/RimoChan/rimo_util.git
+pip install git+https://github.com/RimoChan/rimo_utils.git
 ```
 
 话说真的有人用吗……
