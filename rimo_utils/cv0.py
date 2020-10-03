@@ -25,3 +25,16 @@ def write(img, img_path, param=None):
         else:
             _, data = cv2.imencode(img_path, img)
         f.write(data)
+
+
+def VideoCapGen(source, size: tuple = None):
+    cap = cv2.VideoCapture(source)
+    if size:
+        x, y = size
+        cap.set(cv2.CAP_PROP_FRAME_WIDTH, x)
+        cap.set(cv2.CAP_PROP_FRAME_HEIGHT, y)
+    while True:
+        _, img = cap.read()
+        if img is None:
+            raise Exception('没图')
+        yield img

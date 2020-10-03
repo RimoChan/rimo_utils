@@ -14,10 +14,14 @@
         - 替代`cv2.imread`。
         - 解决中文路径读取失败的问题。
         - 在读取失败时不返回`None`，而是`raise`
-    - `cv0.write(img, img_path, param)`
+    - `cv0.write(img, img_path, param=None)`
         - 替代`cv2.imwrite`
         - 解决中文路径写入失败的问题。
         - 为非`np.uint8`的图片转换格式。
+    - `cv0.VideoCapGen(source, size: tuple = None)`
+        - `cv2.VideoCapture`的包装
+        - 一个生成器
+        - 在读取失败时不返回`None`，而是`raise`
 
 + matrix
     - 齐次座标系的常用变换矩阵
