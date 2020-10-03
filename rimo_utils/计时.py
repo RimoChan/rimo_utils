@@ -1,6 +1,5 @@
 import contextlib
 import time
-import random
 
 
 @contextlib.contextmanager
