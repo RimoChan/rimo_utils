@@ -1,3 +1,5 @@
+import logging
+
 from cv2 import *
 import numpy as np
 
@@ -38,3 +40,15 @@ def VideoCapGen(source, size: tuple = None):
         if img is None:
             raise Exception('没图')
         yield img
+
+
+def circle(img, center, radius, color, thickness=1, lineType=16):
+    center = tuple([round(x) for x in center])
+    cv2.circle(img, tuple(center), radius, color, thickness, lineType)
+    return img
+
+
+def putText(img, text, org, fontFace, fontScale, color, thickness=1, lineType=16, bottomLeftOrigin=False):
+    org = tuple([round(x) for x in org])
+    cv2.putText(img, text, org, fontFace, fontScale, color, thickness, lineType, bottomLeftOrigin)
+    return img

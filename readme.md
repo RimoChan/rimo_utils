@@ -22,6 +22,12 @@
         - `cv2.VideoCapture`的包装
         - 一个生成器
         - 在读取失败时不返回`None`，而是`raise`
+    - 绘图函数，包括: 
+        - `cv0.circle(img, center, radius, color, thickness=1, lineType=16)` 
+        - `cv0.putText(img, text, org, fontFace, fontScale, color, thickness=1, lineType=16, bottomLeftOrigin=False)`
+        - 替代原本的同名函数。
+        - 位置参数(如`center`)不再受限于`tuple`类型，内部元素也可以是`float`。
+        - 默认使用带抗锯齿的`lineType`。
 
 + matrix
     - 齐次座标系的常用变换矩阵
@@ -50,7 +56,7 @@
 
 莉沫工具箱可以直接通过pip安装，只要——
 
-```
+```bash
 pip install git+https://github.com/RimoChan/rimo_utils.git
 ```
 
