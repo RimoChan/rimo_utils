@@ -3,7 +3,7 @@ import setuptools
 
 setuptools.setup(
     name='rimo_utils',
-    version='1.3.1',
+    version='1.3.2',
     author='RimoChan',
     author_email='the@librian.net',
     description='RimoChan util.',
@@ -15,6 +15,8 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
     ],
-    install_requires=open('requirement.txt').read().splitlines(),
+    install_requires=[
+        'chardet==3.0.4',   
+    ],
     python_requires='>=3.6',
 )
