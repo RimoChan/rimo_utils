@@ -60,7 +60,7 @@
 莉沫工具箱可以直接通过pip安装，只要——
 
 ```bash
-pip install git+https://github.com/RimoChan/rimo_utils.git
+pip install rimo-utils
 ```
 
 然后`from rimo_utils import 什么`就行了。
