@@ -5,8 +5,8 @@
 ## 内容
 
 + 常用功能
-    - `rimo_utils.good_open(path)`
-    - 包装`open(path, 'r')`，可以自动识别文本编码。
+    - `rimo_utils.good_open(path, mode='r', encoding=None)`
+    - 包装原本的`open`，可以自动识别文本编码。
 
 + cv0
     - OpenCV的包装，解决一些OpenCV里让人不舒服的地方。
@@ -48,9 +48,9 @@
 
 + 计时
     - 使用上下文管理器的计时器
-    - `with 计时.计时(名字):`
+    - `with 计时.计时(名字=''):`
         - 计算with块中的代码执行用时并print
-    - `with 计时.帧率计(名字):`
+    - `with 计时.帧率计(名字=''):`
         - 计算with块中的代码帧率
         - 在累积时长每到达3秒时会print一次
 
@@ -69,7 +69,7 @@ pip install rimo-utils
 
 + 如果你想升级莉沫工具箱，在`pip -U`的时候遇到了错误，这可能是因为你的pip版本太旧了。
 
-+ pip只会帮你装上常用功能的requirements。因为这个仓库涉及领域较多，安装所有依赖会非常慢，所以你应该在遇到缺依赖的时候再用pip手动安装。
++ pip只会帮你装上常用功能的requirements。因为这个仓库安装所有依赖会非常慢，所以你应该在遇到缺依赖的时候再用pip手动安装。
 
 
 话说真的有人用吗……
