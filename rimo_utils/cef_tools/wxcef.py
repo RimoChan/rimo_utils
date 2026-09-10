@@ -133,7 +133,7 @@ class MainFrame(wx.Frame):
 
         # Set wx.WANTS_CHARS style for the keyboard to work.
         # This style also needs to be set for all parent controls.
-        self.browser_panel = wx.Panel(self, size=tuple(size))
+        self.browser_panel = wx.Panel(self, size=tuple(size), style=wx.WANTS_CHARS)
         self.browser_panel.Bind(wx.EVT_SIZE, self.OnSize)
         wx.Window.Fit(self)
 
